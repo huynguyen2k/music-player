@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- link script -->
+    <script src="https://kit.fontawesome.com/15e239e756.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- start-music-player -->
+        <div class="music-player" id="music-player">
+    
+            <!-- music-player-wrapper -->
+            <div class="music-player__wrapper">
+
+                <!-- top-ui -->
+                <div class="music-player__top-ui">
+
+                    <!-- singer-info -->
+                    <div class="music-player__song-info" id="player-header">
+                        <h3 class="song-name"></h3>
+                        <div class="singer-img" id="cd-player">
+                            <img src="assets/image/song1.jpg" alt="Song1">
+                        </div>
+                        <audio src=""></audio>
+                    </div>
+                
+                    <!-- music-player-control -->
+                    <div class="music-player__controls" id="control-area">
+                        <div class="control-btns">
+                            <span class="button" id="repeat-btn">
+                                <i class="fas fa-redo-alt"></i>
+                            </span>
+                            <span class="button" id="pre-btn">
+                                <i class="fas fa-step-backward"></i>
+                            </span>
+                            <span class="button play-btn" id="play-btn">
+                                <i class="fas fa-play"></i>
+                                <i class="fas fa-pause"></i>
+                            </span>
+                            <span class="button" id="next-btn">
+                                <i class="fas fa-step-forward"></i>
+                            </span>
+                            <span class="button" id="shuffle-btn">
+                                <i class="fas fa-random"></i>
+                            </span>
+                        </div>
+                        <div class="control-bar" id="control-bar">
+                            <div class="activated-bar" id="activated-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- songs-list -->
+                <div class="music-player__songs-list" id="play-list"></div>
+            </div>
+        </div>
+        <!-- end-music-player -->
+    </div>
+
+
+    <!-- scripts -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

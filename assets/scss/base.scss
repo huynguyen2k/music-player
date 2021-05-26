@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+$small-width-btn: 35px;
+$small-height-btn: 35px;
+
+$big-width-btn: 55px;
+$big-height-btn: 55px;
+
+/* width-scroll-bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* space-color */
+::-webkit-scrollbar-track {
+    background-image: linear-gradient(to bottom, var(--light-color) 0, var(--dark-color) 350px);
+}
+
+/* scroll-bar-color */
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--primary-text-color);
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+html * {
+    box-sizing: inherit;
+}
+
+:root {
+    --primary-color: #fd3538;
+    --primary-text-color: #3462c0;
+
+    --light-color: #2b61ab;
+    --dark-color: #030207;
+    // --box-shadow-color: #85929E;
+    --box-shadow-color: #2ECC71;
+}
+
+.button {
+    color: var(--primary-text-color);
+    display: inline-block;
+    width: $small-width-btn;
+    height: $small-height-btn;
+    line-height: $small-height-btn;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+
+    & + & {
+        margin-left: 16px;
+    }
+
+    &--active {
+        color: var(--primary-color);
+    }
+}
+
+.play-btn {
+    display: inline-block;
+    width: $big-width-btn;
+    height: $big-height-btn;
+    line-height: $big-height-btn - 1px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    color: white;
+    background-color: var(--primary-color);
+
+    [class*='fa-play'] {
+        display: inline-block;
+    }
+    [class*='fa-pause'] {
+        display: none;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.playing {
+    [class*='fa-play'] {
+        display: none;
+    }
+    [class*='fa-pause'] {
+        display: inline-block;
+    }
+}
+
+.song {
+    display: flex;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    align-items: center;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--active {
+        color: white;
+        background-color: var(--primary-text-color);
+    }
+
+    &__img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        margin-left: 16px;
+
+        .song-name {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        .singer-name {
+            font-size: 0.8rem;
+        }
+    }
+}
