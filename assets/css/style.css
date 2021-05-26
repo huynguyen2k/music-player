@@ -49,6 +49,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  box-shadow: 0 0 8px 5px var(--primary-color);
 }
 .music-player__controls {
   padding: 16px 32px 24px;
